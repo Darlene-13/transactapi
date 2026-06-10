@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "02ff27e3-9248-4450-99a4-6a41924aed92",
+		"name": "Transactapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39298494"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Darlene Wendie\",\n  \"email\": \"darlene@example.com\",\n  \"phone\": \"0712345678\",\n  \"initialBalance\": 5000.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/accounts/ACC6088147994/balance"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@example.com\",\n  \"phone\": \"0799887766\",\n  \"initialBalance\": 3000.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"senderAccountNumber\": \"ACC6088147994\",\n  \"receiverAccountNumber\": \"ACC6258666141\",\n  \"amount\": 1000.00,\n  \"description\": \"Sending Jane some cash\",\n  \"transferReference\": \"TXN-2026-001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/transactions/transfer"
+			},
+			"response": []
+		}
+	]
+}
